@@ -1,0 +1,126 @@
+:root {
+  --navbar-text-color: #dce0e8;
+  /* --navbar-bg-color: #0b6e4f;*/
+  /*--navbar-bg-color: #232638;*/
+  --navbar-bg-color: #151622;
+  --background-color: #1e1e2e;
+  --main-bg: #1e1e2e;;
+  --main-text: #4c4f69;
+
+  --bs-primary: #15ab6f;
+  /*--background-color: #232634;*/
+}
+
+
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #0b6e4f;
+  --bs-btn-hover-border-color: #0b6e4f;
+  --bs-btn-active-bg: #1854cc;
+  --bs-btn-active-border-color: #174ebf;
+  --bs-btn-disabled-bg: var(--bs-primary);
+  --bs-btn-disabled-border-color: #0b6e4f;
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.959);
+  border: solid #1e1e2e;
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 2.5em rgba(12, 12, 12, 0.1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+
+.login_banner {
+  background-color: #181926;
+  color: var(--navbar-text-color);
+}
+
+.gradient-text {
+  background: linear-gradient(to bottom, #15ab6f 15%, #00ff77 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.icon-linkedin {
+    filter: invert(24%) sepia(85%) saturate(2076%) hue-rotate(190deg) brightness(96%) contrast(101%);
+    transition: all 0.3s ease;
+}
+
+.white-icons {
+    filter: brightness(0) invert(1); 
+    transition: all 0.3s ease;
+}
+
+
+
+.gradient-header {
+  background: linear-gradient(to bottom, #15ab6f 15%, #00ff77 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.gradient-header-dark {
+  background: linear-gradient(to bottom, #181926 33%, #8f95e1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Override text color for navbar elements */
+.navbar-extended .navbar-brand,
+.navbar-extended .navbar-nav .nav-link,
+.navbar-extended .navbar-text {
+  color: var(--navbar-text-color) !important;
+
+
+}
+
+.footer{
+  background: var(--navbar-bg-color);
+  color: var(--navbar-text-color);
+}
+
+footer{
+  background: var(--navbar-bg-color);
+  color: var(--navbar-text-color);
+  flex-shrink: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--navbar-text-color);
+}
+
+header{
+  background: var(--navbar-bg-color);
+  color: var(--navbar-text-color);
+}
+
+.navbar-div {
+  background: var(--navbar-bg-color)
+}
+
+.project-div{
+  background: var(--main-bg);
+  color: var(--navbar-bg-color);
+}
+
+.border-custom {
+  border-color: var(--bs-primary) !important;
+}
+
+.templatecolor-primary{
+  color: var(--bs-primary) !important;
+}
+
+.navbar .navbar-brand {
+    color: var(--bs-primary) !important;
+}

@@ -1,0 +1,93 @@
+{% from 'partials/card.html' import project_card %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %} {% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/my-theme.css') }}">
+</head>
+
+<body>
+
+<div class="navbar-div">
+<div class="container-md ">
+<header>
+    <div class="navbar-extended ">
+  	<nav class="navbar navbar-expand-lg ">
+  	  <div class="container-md">
+  	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+  	      <span class="navbar-toggler-icon"></span>
+  	    </button>
+  	    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+			 <a class="fw-bold gradient-text" style="font-size: 1.5em; text-transform: uppercase;" href="#">
+			        <span>&gt;</span><span class="blinking-underscore">_</span><span>&nbsp;vsinagl.dev</span>
+			</a>
+			    <script>
+			    function blinkUnderscore() {
+			        const underscore = document.querySelector('.blinking-underscore');
+			        setInterval(() => {
+			            underscore.style.visibility = (underscore.style.visibility === 'hidden' ? 'visible' : 'hidden');
+			        }, 700); //  interval of blinking
+			    }
+			
+			    document.addEventListener('DOMContentLoaded', blinkUnderscore);
+			    </script>
+
+  	      <ul class="navbar-nav ms-auto me-5 mb-2  mb-lg-0">
+  	        <li class="nav-item">
+  	          <a class="nav-link active fs-1.5" aria-current="page" href="#">Home</a>
+  	        </li>
+  	        <li class="nav-item">
+  	          <a class="nav-link fs-1.5" href="#">Link</a>
+  	        </li>
+  	        <li class="nav-item ">
+  	          <a class="nav-link disabled fs-1.5" aria-disabled="true">Disabled</a>
+  	        </li>
+  	      </ul>
+  	    	<a class="btn btn-light"  href="{{ url_for('admin.login') }}"> Login </a>
+  	    </div>
+  	  </div>
+  	</nav>
+  	</div>
+  </header>
+</div>
+</div>
+	
+	
+
+<div class="container-md my-5">
+		  {%include 'partials/about2.html' %}	
+</div>
+
+
+<div class="main-body project-div ">
+
+<div class="container-xxl my-5 pt-5 pb-5 py-sm-5 text-center">
+
+     	<h1 class="gradient-header"> Projects </h1>
+     	  here will be cards with projects
+
+        <div class="card login_banner p-4" style="border-radius: 1rem;">
+			<div class="row row-cols-1 row-cols-md-2 g-4">
+				{% for project in projects %}
+					{{ project_card(project.image_filename, project.github, project.title, project.description)}}
+				{% endfor %}
+			</div>
+		</div>
+   </div>
+</div>
+
+<!-- <div class="b-example-divider"></div> -->
+<footer class="" >
+	{%include  'partials/footer.html' %}
+</footer>
+
+
+
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<section id="header"
+	<div class="navbar-div">
+		<div class="container-md ">
+			<header>
+	    		<div class="navbar-extended ">
+	  			<nav class="navbar navbar-expand-lg ">
+	  	  		<div class="container-md">
+	  	    		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+	  	      		<span class="navbar-toggler-icon"></span>
+	  	    		</button>
+	  	    		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+				 		<a class="fw-bold gradient-text" style="font-size: 1.5em; text-transform: uppercase;" href="#">
+				        		<span>&gt;</span><span class="blinking-underscore">_</span><span>&nbsp;vsinagl.dev</span>
+						</a>
+				    		<script>
+				    		function blinkUnderscore() {
+				        		const underscore = document.querySelector('.blinking-underscore');
+				        		setInterval(() => {
+				            		underscore.style.visibility = (underscore.style.visibility === 'hidden' ? 'visible' : 'hidden');
+				        		}, 700); //  interval of blinking
+				    		}
+				    		document.addEventListener('DOMContentLoaded', blinkUnderscore);
+				    		</script>
+						
+						<!-- {% block header_content %} {%endblock %} -->
+     					{{ header_content|safe }}
+
+	  	    		</div>
+	  	  		</div>
+	  			</nav>
+	  			</div>
+	  		</header>
+		</div>
+	</div>
+</section>
+	  	      		<!-- <ul class="navbar-nav ms-auto me-5 mb-2  mb-lg-0">
+	  	        		<li class="nav-item">
+	  	          		<a class="nav-link active fs-1.5" aria-current="page" href="#">Home</a>
+	  	        		</li>
+	  	        		<li class="nav-item">
+	  	          		<a class="nav-link fs-1.5" href="#">Link</a>
+	  	        		</li>
+	  	        		<li class="nav-item ">
+	  	          		<a class="nav-link disabled fs-1.5" aria-disabled="true">Disabled</a>
+	  	        		</li>
+	  	      		</ul> -->
