@@ -2,5 +2,7 @@
 instance
 worknotes.md
 *.json
+package.json
+package-lock.json
 __pycache__
 *.code
