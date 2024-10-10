@@ -12,7 +12,7 @@ def home():
     args = request.args
     username = args.get('name')
     with open('projects.yaml') as file:
-        data = yaml.load(file)
+        data = yaml.safe_load(file)
     return render_template("index.html", name = username, projects=data, now=datetime.now().strftime('%Y'))
 
 @views.route("/aboutme")

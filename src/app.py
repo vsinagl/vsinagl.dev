@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from config import limiter, recaptcha, app_config
 from database import db
 from utils import mailer
+import os
 
 
 
@@ -32,4 +33,4 @@ def create_app():
 
 if __name__ == "__main__":
     app = create_app()
-    app.run(debug=True, port=8000) #debug - when you change app file, it automaticaly reload the app script --> so you don't need to  reaload it again
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8000)), debug=True)

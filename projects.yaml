@@ -13,8 +13,8 @@
   description: "It started as simple flask tutorial from youtube and ended up as personal website with user login, database, email messaging ...
    
    I still have many plans with this website, so let's see where it goes 🚀"
-  image_filename: "vsinagldev_project.jpg" 
-  github: 
+  image_filename: "vsinagldev_project.png" 
+  github: "https://github.com/vsinagl/vsinagl.dev" 
 
 - title: Push&Swap
   description: "Project from 42Prague. The goal of this project is to sort bunch of number using two stacks and defined operations (pushing, swaping, rotating stacks...) with lowest operaton count as possible "

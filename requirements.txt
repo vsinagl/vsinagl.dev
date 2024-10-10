@@ -1,0 +1,7 @@
+Flask
+python-dotenv
+pyyaml
+Flask-SQLAlchemy
+Flask-reCaptcha
+Flask-Limiter
+Flask-Mail
