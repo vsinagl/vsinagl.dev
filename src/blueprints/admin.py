@@ -1,34 +1,8 @@
 from flask import Blueprint, jsonify, render_template, request, url_for, redirect, session, flash
 from os import getenv
-import os
-from dotenv import load_dotenv
-import yaml
-from datetime import datetime
 
 
-views = Blueprint(__name__, "home")
-admin = Blueprint(__name__, "admin")
-
-@views.route("/")
-def profile():
-    args = request.args
-    username = args.get('name')
-    with open('projects.yaml') as file:
-        data = yaml.load(file)
-    return render_template("profile.html", name = username, projects=data, now=datetime.now().strftime('%Y'))
-
-@views.route("/aboutme")
-def about():
-    return "<h1> work in progress </h1>"
-
-
-@views.route("/json")
-def get_json():
-    return jsonify({'name':'Viktor', 'age': 25})
-
-@views.route("/redirect")
-def redirect_about():
-    return redirect(url_for("views.aboutme"))
+admin = Blueprint("admin", "admin")
 
 @admin.route("/login",  methods=["GET", "POST"])
 def login():
@@ -63,4 +37,3 @@ def admin_page():
         return (f"<h1> Welcome user: {user} </h1> lorem ipsum")
     else:
         return redirect(url_for("admin.login"))
-

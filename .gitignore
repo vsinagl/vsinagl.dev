@@ -1,1 +1,6 @@
 *.env
+instance
+worknotes.md
+*.json
+__pycache__
+*.code

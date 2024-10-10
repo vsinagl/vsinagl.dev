@@ -1,27 +1,26 @@
-
 <section id="header"
 	<div class="navbar-div">
 		<div class="container-md ">
 			<header>
 	    		<div class="navbar-extended ">
-	  			<nav class="navbar navbar-expand-lg ">
+	  			<nav class="navbar navbar-dark navbar-expand-lg ">
 	  	  		<div class="container-md">
+				 	<a class="fw-bold gradient-text my-title responsive-title"  href=" {{url_for('views.home')}}">
+				        	<span>&gt;</span><span class="blinking-underscore">_</span><span>&nbsp;vsinagl.dev</span>
+					</a>
+				    	<script>
+				    	function blinkUnderscore() {
+				        	const underscore = document.querySelector('.blinking-underscore');
+				        	setInterval(() => {
+				            	underscore.style.visibility = (underscore.style.visibility === 'hidden' ? 'visible' : 'hidden');
+				        	}, 700); //  interval of blinking
+				    	}
+				    	document.addEventListener('DOMContentLoaded', blinkUnderscore);
+				    	</script>
 	  	    		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 	  	      		<span class="navbar-toggler-icon"></span>
 	  	    		</button>
 	  	    		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-				 		<a class="fw-bold gradient-text" style="font-size: 1.5em; text-transform: uppercase;" href="#">
-				        		<span>&gt;</span><span class="blinking-underscore">_</span><span>&nbsp;vsinagl.dev</span>
-						</a>
-				    		<script>
-				    		function blinkUnderscore() {
-				        		const underscore = document.querySelector('.blinking-underscore');
-				        		setInterval(() => {
-				            		underscore.style.visibility = (underscore.style.visibility === 'hidden' ? 'visible' : 'hidden');
-				        		}, 700); //  interval of blinking
-				    		}
-				    		document.addEventListener('DOMContentLoaded', blinkUnderscore);
-				    		</script>
 						
 						<!-- {% block header_content %} {%endblock %} -->
      					{{ header_content|safe }}

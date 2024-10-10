@@ -1,12 +1,12 @@
 {% macro project_card(image_filename, github, title, description) %}
 <div class = "col">
-	<div class="card">
-		<div class="container py-3 px-3">
+	<div class="card h-100">
+		<div>
 	  		<img src="{{ url_for('static', filename='img/' + image_filename) }}" class="card-img-top"  alt="...">
 		</div>
 	  <div class="card-body">
-		<h5 class="display-8 gradient-header-dark"> {{title}} </h5>
-	    <p class="card-text"> {{description}}
+		<h5 class="gradient-header-dark responsive-heading" style="font-size: 1.3em;"> {{title}} </h5>
+	    <p class="card-text responsive-text"> {{description}}
 		<br>
 		<a href="{{github}}", target="_blank">
 			<img src="{{ url_for('static', filename='img/github.svg') }}" alt="LinkedIn" style="width:30px; height:30px;">

@@ -1,12 +1,15 @@
-- title: MyTestProject
-  description: "fasdh sdpfhsdfhsdpfhdpsfhsdpafuuuuuul lorem ipsum sodo domino estsdpfhsdfhsdpfhdpsfhsdpafuuuuuul lorem ipsum sodo domino essdpfhsdfhsdpfhdpsfhsdpafuuuuuul lorem ipsum sodo domino estt"
-  image_filename: "profile_test.png" 
-  github: www.github.com
-- title: MyTestProject2
-  description: "fasdh sdpfhsdfhsdpfhdpsfhsdpafuuuuuul lorem ipsum sodo domino estsdpfhsdfhsdpfhdpsfhsdpafuuuuuul lorem ipsum sodo domino essdpfhsdfhsdpfhdpsfhsdpafuuuuuul lorem ipsum sodo domino estt"
-  image_filename: "vsinagldev2.png" 
-  github: www.github.com
-- title: MyTestProject3
-  description: "fasdh sdpfhsdfhsdpfhdpsfhsdpafuuuuuul lorem ipsum sodo domino estsdpfhsdfhsdpfhdpsfhsdpafuuuuuul lorem ipsum sodo domino essdpfhsdfhsdpfhdpsfhsdpafuuuuuul lorem ipsum sodo domino estt"
-  image_filename: "vsinagldev2.png" 
-  github: www.github.com
+- title: "FdF 🗺"
+  description: "Wireframe model renderer written in C,
+  that used minilibx and X11 server (graphical library that provide API for communication with X11 server). Project from 42 Prague"
+  image_filename: "fdf.png" 
+  github: https://github.com/vsinagl/FdF-Wireframe-model
+
+- title: CODETRACKER.NVIM ⏱
+  description: "Neovim plugin coded in lua for tracking IDE sessions using sqlite3 and python dash for dashboard visualization"
+  image_filename: "codetracker.jpg" 
+  github: https://github.com/vsinagl/codetracker.nvim
+
+- title: Push&Swap
+  description: "Project from 42Prague. The goal of this project is to sort bunch of number using two stacks and defined operations (pushing, swaping, rotating stacks...) with lowest operaton count as possible "
+  image_filename: "push_swap.png" 
+  github: https://github.com/vsinagl/push_swap

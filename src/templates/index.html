@@ -1,0 +1,54 @@
+
+{% from 'partials/card.html' import project_card %}
+{% extends "partials/base.html" %}
+
+{% block navbar %}
+	{% with header_content = '
+        <ul class="navbar-nav ms-auto me-5 mb-2  mb-lg-0 fs-5">
+            <li class="nav-item">
+                <a class="nav-link active fs-5" aria-current="page" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fs-5" href="#main-body">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fs-5" href="' ~ url_for('user.contact') ~ '">Contact</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link disabled fs-5 fw-bold" aria-disabled="true">Blog</a>
+            </li>
+        </ul>
+		<a href="' ~ url_for('admin.login') ~ '" class="btn btn-light px-4 me-md-2 ms-auto" role="button">Login</a>
+	' %}
+	  {% include 'partials/header.html' %}
+	{% endwith %}
+
+{% endblock %}
+
+
+{% block hero %} 
+
+<div id="hero" class="container-md my-5 mb-10">
+		  {%include 'partials/about2.html' %}
+</div>
+{% endblock %}
+
+
+{% block main_body %}
+
+<div class="container-xxl my-5 pt-5 pb-5 py-sm-5 text-center">
+
+     	<h1 class="gradient-header"> Projects </h1>
+
+        <div class="card login_banner p-4" style="border-radius: 1rem;">
+			<div class="row row-cols-1 row-cols-md-2 g-4">
+				{% for project in projects %}
+					{{ project_card(project.image_filename, project.github, project.title, project.description)}}
+				{% endfor %}
+			</div>
+		</div>
+   </div>
+
+{% endblock %}
+
+
