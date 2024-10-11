@@ -5,6 +5,7 @@ from config import limiter, recaptcha, app_config
 from database import db
 from utils import mailer
 import os
+from waitress import serve
 
 
 
@@ -33,4 +34,5 @@ def create_app():
 
 if __name__ == "__main__":
     app = create_app()
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8000)), debug=True)
+    #app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8000)), debug=True)
+    serve(app, host='0.0.0.0', port='8000')

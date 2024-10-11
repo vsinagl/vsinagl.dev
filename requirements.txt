@@ -5,3 +5,4 @@ Flask-SQLAlchemy
 Flask-reCaptcha
 Flask-Limiter
 Flask-Mail
+Waitress

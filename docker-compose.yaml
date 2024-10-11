@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  flask_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - FLASK_APP=src/app.py
+      - FLASK_ENV=production
+      - PORT=8000
+    expose:
+      - 8000
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - flask_app
+
+volumes:
+  nginx_config:
